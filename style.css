@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2 family=Poppins:wght@400;500&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.container{
+    /* background-color: #f1f1f1; */
+    background: transparent;
+    backdrop-filter: blur(15px);
+    width: 480px;
+    height: 300px;
+    border-radius: 6px;
+    box-shadow: 0 0 8px rgba(0,0,0,3);
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "left-container right-container";
+}
+
+.container .left-container{
+    grid-area: left-container;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 1rem;
+    /* border: 2px solid rgba(255, 0, 255, 0.5); */
+    background: lightseagreen;
+    border-radius: 6px 0 0 6px;
+}
+
+.container right-container{
+  grid-area: right-container;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 1rem;
+  /* border: 2px solid rgba(255, 0, 255, 0.5); */
+  background: #f4351e;
+  border-radius: 0 6px 6px 0;
+}
+.left-container .date{
+font-size: 9rem;
+font-weight: 700;
+line-height: 1;
+color: #fff;
+}
+.left-container .date::before{
+  content: '';
+  position: absolute;
+  background: linear-gradient(45deg, lightgreen, lightseagreen,green);
+  background-size: 200% 200%;
+  top:-5px;
+  left:-5px;
+  bottom: -5px;
+  right: -5px;
+  z-index: -1;
+  filter: blur(30px);
+
+}.left-container .day{
+  font-size: 2rem;
+  font-weight: 600;
+  color: #fff;
+
+}
+.right-container .year{
+  font-size: 4rem;
+  font-weight: 600;
+  color: #fff;
+
+}
+.right-container .month{
+  font-size: 2rem;
+  font-weight: 600;
+  color: #fff;
+}
+section{
+  background: url('bgg.jpg') no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center ;
+  animation: animatebgg 5s linear infinite;
+}
+@keyframes animatebgg{
+  100%{
+    filter: hue-rotate(360deg);
+  }
+}
+.container .left-container .left{
+  color: #fff;
+  background-color: #2D2F38;
+  width: 250px;
+  height: 70px;
+  margin-top: 10px;
+  border-radius: 10px;
+  backdrop-filter: blur(15px);
+}
+.container .left-container .left::before{
+  content: '';
+  position: absolute;
+  background: linear-gradient(45deg, lightgreen, lightseagreen,green);
+  background-size: 200% 200%;
+  top:-5px;
+  left:-5px;
+  bottom: -5px;
+  right: -5px;
+  z-index: -1;
+  filter: blur(30px);
+
+
+}
+#hours{
+  font-weight: 600;
+  padding: 0 10px;
+  line-height: 125px;
+  font-size: 4rem;
+  line-height: 1.1;
+  background: -webkit-linear-gradient(90deg , blue,white);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+#dots{
+  font-size: 3rem;
+  transform: translateY(-3px);
+  background: -webkit-linear-gradient(90deg,orchid,white);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+#min{
+  font-size: 2rem;
+  font-weight: 700;
+  background: -webkit-linear-gradient(90deg, orchid,white);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+#sec{
+  font-size: 1,8rem;
+  font-weight: 700;
+  background: -webkit-linear-gradient(90deg, orchid,white);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+#period{font-size: 1,8rem;
+  font-weight: 700;
+  background: -webkit-linear-gradient(90deg, red,white);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+.column{
+
+    width: calc(100% / 3 - 5px);
+    
+  
+    
+    background: #fff;
+    
+    border-radius: 5px;
+    
+    border: 1px solid #999;
+    
+    padding: 0 10px;
+    
+    display: flex;
+    
+    align-items: center;
+    
+    justify-content: center;
+  }
+  .column select{
+  
+   
+    outline: none;
+    
+    border: none;
+    
+    height: 53px;
+    
+    width: 100%;
+   
+    font-size: 19px;
+    
+    }
